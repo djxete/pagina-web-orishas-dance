@@ -6,11 +6,17 @@
     box-sizing: border-box;
 }
 
+/* --- Variables --- */
+
+:root{
+    --color-basico: lightblue;
+}
+
 /* --- Body --- */
 body{
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    background-color: rgb(233, 233, 233);
+    background-color: rgb(247, 244, 244);
     overflow: hidden;
 }
 
@@ -21,54 +27,50 @@ body{
     top: -100px;
     left:-100px;
     z-index:2;
+    
 }
-
-.menu.mostrar-menu{
-    transform: rotate(-20deg);
-}
-
 .menu-desplegable{
-    background-color: lightblue;
+    background-color: var(--color-basico);
     height: 200px;
     width: 200px;
     border-radius: 50%;
     position: relative;
     transition: transform 0.5s linear;
 }
-
 .menu-desplegable .boton{
     color: #fff;
     font-size: 2rem;
     position: absolute;
     left: 120px;
-    top: 95px;
+    top: 100px;
     height: 100px;
     background-color: transparent;
     border: none;
     cursor: pointer;
 }
 
-.menu-desplegable .btn:focus{
-    outline: none;
-}
 
-.menu-desplegable .btn#open{
-    left: 60%;
+.menu.mostrar-menu{
+    transform: rotate(-20deg);
 }
-
-.menu-desplegable .btn#close{
-    top: 60%;
-    transform: rotate(90deg);
-    transform-origin: top left;
-}
-
 .menu.mostrar-menu .menu-desplegable{
     transform: rotate(-70deg);
 }
 
+.menu-desplegable .boton:focus{
+    outline: none;
+}
 
+.menu-desplegable .boton#open{
+    left: 60%;
+}
 
-
+.menu-desplegable .boton#close{
+    top: 60%;
+    left: 55%;
+    transform: rotate(90deg);
+    transform-origin: top left;
+}
 
 
 .nav{
@@ -76,10 +78,70 @@ body{
 }
 
 
-.header__div1-img{
-    width: 300px;
-    height: 300px;
+/*--- Header --- */
+
+.header{
+    display: flex;
+    margin: 7rem 1rem;
+    justify-content: space-between;
+    width: 95%;
+    
+}
+
+.header__div1{
+    order: 2;
+    flex-basis: 50%;
+    text-align: center;
+    
+}
+
+.header__div1 h1{
+    margin-top:0;
+}
+.header__div1 p{
+    line-height: 1.5;
+}
+
+.header__div1 button{
+    border: none;
+    background-color: rgb(90, 187, 219);
+    padding: 1rem;
+    border-radius: 5%;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1.3px;
+}
+
+.header__div1 button:hover{
+    box-shadow: inset 0 0 20px rgba(49, 138, 172, 0.5), 0 0 20px rgba(49, 138, 172, 0.4);
+    outline-color: rgba(49, 138, 172, 0);
+    outline-offset: 1000px;
+    font-weight: 700;
+    
+    
+}
+
+.header__div2{
+    order: 1;
+    flex-basis: 50%;
+    position: relative;
+    z-index: 10;
+}
+.header__div2-img{
+    width: 250px;
+    height: 250px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+}
+.header__div3{
+    position: absolute;
+    background-color: var(--color-basico);
+    top: 130px;
+    left: 30px;
+    height: 250px;
+    width: 250px;
+    z-index: 1;
 }
