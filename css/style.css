@@ -1,108 +1,112 @@
-/* --- Google fonts --- */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+/* ------------- Google fonts ---------------- */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
 
-/* --- Página web --- */
-*{
+/* ------------- Página web ---------------- */
+
+* {
     box-sizing: border-box;
-}
-
-/* --- Variables --- */
-
-:root{
-    --color-basico: lightblue;
-}
-
-/* --- Body --- */
-body{
     margin: 0;
-    font-family: 'Roboto', sans-serif;
-    background-color: rgb(247, 244, 244);
-    overflow: hidden;
 }
 
-/*--- Nav ---*/
+/* ------------- Variables ---------------- */
 
-.menu{
+:root {
+    --color-basico: rgb(173, 216, 230);
+}
+
+/* ------------- Body ---------------- */
+
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgb(247, 244, 244);
+    /* overflow: hidden; */
+}
+
+/* ------------- Nav ---------------- */
+
+.menu {
     position: fixed;
     top: -100px;
-    left:-100px;
-    z-index:2;
-    
+    left: -100px;
+    z-index: 2;
 }
-.menu-desplegable{
+
+.menu-desplegable {
     background-color: var(--color-basico);
-    height: 200px;
-    width: 200px;
+    height: 175px;
+    width: 175px;
     border-radius: 50%;
     position: relative;
     transition: transform 0.5s linear;
 }
-.menu-desplegable .boton{
+
+.menu-desplegable .boton {
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.7rem;
     position: absolute;
     left: 120px;
-    top: 100px;
+    top: 80px;
     height: 100px;
     background-color: transparent;
     border: none;
     cursor: pointer;
 }
 
-
-.menu.mostrar-menu{
+.menu.mostrar-menu {
     transform: rotate(-20deg);
 }
-.menu.mostrar-menu .menu-desplegable{
+
+.menu.mostrar-menu .menu-desplegable {
     transform: rotate(-70deg);
 }
 
-.menu-desplegable .boton:focus{
+.menu-desplegable .boton:focus {
     outline: none;
 }
 
-.menu-desplegable .boton#open{
-    left: 60%;
+.menu-desplegable .boton#open {
+    left: 62%;
 }
 
-.menu-desplegable .boton#close{
-    top: 60%;
+.menu-desplegable .boton#close {
+    top: 65%;
     left: 55%;
     transform: rotate(90deg);
     transform-origin: top left;
 }
 
-
-.nav{
+.nav {
     display: none;
 }
 
+/* ------------- Header ---------------- */
 
-/*--- Header --- */
-
-.header{
+.header {
     display: flex;
     margin: 7rem 1rem;
     justify-content: space-between;
-    width: 95%;
-    
+    width: 96%;
 }
 
-.header__div1{
+.header__div1 {
     order: 2;
     flex-basis: 50%;
     text-align: center;
-    
 }
 
-.header__div1 h1{
-    margin-top:0;
+.header__div1 h1 {
+    margin: 0 0 10px;
+    font-size: 1.6rem;
 }
-.header__div1 p{
+
+.header__div1 p {
     line-height: 1.5;
+    margin: 0 0 10px;
 }
 
-.header__div1 button{
+.header__div1 button {
     border: none;
     background-color: rgb(90, 187, 219);
     padding: 1rem;
@@ -114,29 +118,29 @@ body{
     letter-spacing: 1.3px;
 }
 
-.header__div1 button:hover{
+.header__div1 button:hover {
     box-shadow: inset 0 0 20px rgba(49, 138, 172, 0.5), 0 0 20px rgba(49, 138, 172, 0.4);
     outline-color: rgba(49, 138, 172, 0);
     outline-offset: 1000px;
     font-weight: 700;
-    
-    
 }
 
-.header__div2{
+.header__div2 {
     order: 1;
     flex-basis: 50%;
     position: relative;
     z-index: 10;
 }
-.header__div2-img{
+
+.header__div2-img {
     width: 250px;
     height: 250px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
-.header__div3{
+
+.header__div3 {
     position: absolute;
     background-color: var(--color-basico);
     top: 130px;
@@ -145,3 +149,270 @@ body{
     width: 250px;
     z-index: 1;
 }
+
+/* ------------- Nuestras clases ---------------- */
+
+
+.clases {
+    position: relative;
+    margin: 0 auto;
+    width: 95%;
+}
+
+.clases .linea-azul {
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.linea-azul::after {
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 3px;
+    width: 100px;
+    background-color: var(--color-basico);
+}
+
+/* ------------- Section clases ---------------- */
+
+
+.clases__div {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 40px auto 0px;
+    justify-content: space-around;
+}
+
+.clases__div-div {
+    width: 50%;
+}
+
+.clases__div-div {
+    height: 250px;
+    width: 250px;
+    margin: 15px 5px;
+    position: relative;
+}
+
+.clases__div-div-img {
+    height: 250px;
+    width: 250px;
+}
+
+.clases__div-div-button {
+    position: absolute;
+    left: 0;
+    bottom: 30%;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(90, 187, 219, 0.9);
+    border: none;
+}
+
+.clases__div-div-button a {
+    color: #fff;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* -------------- Clases 1 y 2 -------------- */
+
+.clases__div-div:nth-of-type(1) {
+    width: 45%;
+    height: 250px;
+}
+
+.clases__div-div-img:nth-of-type(1) {
+    width: 100%;
+    height: 100%;
+}
+
+.clases__div-div-button:nth-of-type(1) {
+    width: 100%;
+}
+
+.clases__div-div:nth-of-type(2) {
+    width: 45%;
+    height: 250px;
+}
+
+.clases__div-div-img:nth-of-type(2) {
+    width: 100%;
+    height: 100%;
+}
+
+.clases__div-div-button:nth-of-type(2) {
+    width: 100%;
+}
+
+/* -------------- Clases 3 y 4 -------------- */
+
+.clases__div-div:nth-of-type(3) {
+    width: 55%;
+    height: 250px;
+}
+
+.clases__div-div-img:nth-of-type(3) {
+    width: 100%;
+    height: 100%;
+}
+
+.clases__div-div-button:nth-of-type(3) {
+    width: 100%;
+}
+
+.clases__div-div:nth-of-type(4) {
+    width: 40%;
+    height: 200px;
+}
+
+.clases__div-div-img:nth-of-type(4) {
+    width: 100%;
+    height: 100%;
+}
+
+.clases__div-div-button:nth-of-type(4) {
+    width: 100%;
+}
+
+/* -------------- Clases 5 y 6 -------------- */
+
+.clases__div-div:nth-of-type(5) {
+    width: 40%;
+    height: 200px;
+}
+
+.clases__div-div-img:nth-of-type(5) {
+    width: 100%;
+    height: 100%;
+}
+
+.clases__div-div-button:nth-of-type(5) {
+    width: 100%;
+}
+
+.clases__div-div:nth-of-type(6) {
+    width: 55%;
+    height: 250px;
+}
+
+.clases__div-div-img:nth-of-type(6) {
+    width: 100%;
+    height: 100%;
+}
+
+.clases__div-div-button:nth-of-type(6) {
+    width: 100%;
+}
+
+/* -------------- Clases 9 y 10 -------------- */
+
+.clases__div-div:nth-of-type(9) {
+    width: 40%;
+    height: 200px;
+}
+
+.clases__div-div-img:nth-of-type(9) {
+    width: 100%;
+    height: 100%;
+}
+
+.clases__div-div-button:nth-of-type(9) {
+    width: 100%;
+}
+
+.clases__div-div:nth-of-type(10) {
+    width: 55%;
+    height: 250px;
+}
+
+.clases__div-div-img:nth-of-type(10) {
+    width: 100%;
+    height: 100%;
+}
+
+.clases__div-div-button:nth-of-type(10) {
+    width: 100%;
+}
+
+/* --------- OTRA FORMA DE PONER LAS CLASES -------*/
+
+/*-------------- SEGUNDAS 2 CLASES-------------------*/
+
+/* 
+.clases__div2 {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px auto;
+}
+
+.clases__div-div2:nth-of-type(1) {
+    width: 55%;
+    height: 200px;
+}
+
+.clases__div-div2:nth-of-type(2) {
+    width: 40%;
+}
+
+.clases__div-div2 {
+    height: 250px;
+    width: 250px;
+    margin: 15px 5px;
+    position: relative;
+}
+
+.clases__div-div2-img {
+    height: 200px;
+    width: 250px;
+}
+
+.clases__div-div2-img:nth-of-type(1) {
+    height: 100%;
+    width: 100%;
+}
+
+.clases__div-div2-img:nth-of-type(2) {
+    height: 250px;
+    width: 100%;
+}
+
+.clases__div-div2-button {
+    position: absolute;
+    left: 0;
+    bottom: 30%;
+    width: 100%;
+    height: 75px;
+    background-color: rgb(90, 187, 219, 0.9);
+    border: none;
+}
+
+.clases__div-div2-button a {
+    color: #fff;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: #ffffff;
+    font-weight: bold;
+   
+}
+
+
+.clases__div-div2:nth-of-type(3){
+    width: 40%;
+    height: 200px;
+    top: -30px;
+}
+.clases__div-div2:nth-of-type(4){
+    width: 55%
+} */
