@@ -20,9 +20,11 @@ body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
     background-color: rgb(247, 244, 244);
+    /* background-color: black;
     /* overflow: hidden; */
 }
 
+*/
 /* ------------- Nav ---------------- */
 
 .menu {
@@ -397,23 +399,29 @@ body {
 }
 
 /* ------------- Nuestros profesores ---------------- */
-.profesores{
+
+.clases:nth-child(4) {
+    width: 100%;
+}
+
+.profesores {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
 }
 
 .profesor {
     background-color: #fff;
-    width: 250px;
+    width: 240px;
     height: 450px;
     display: flex;
     flex-direction: column;
     position: relative;
     z-index: 1000;
-    border: 5px solid  rgb(238, 237, 237);
+    border: 5px solid rgb(238, 237, 237);
     border-top-left-radius: 20%;
     border-top-right-radius: 20%;
-
 }
 
 .profesor:before {
@@ -432,8 +440,8 @@ body {
     border-radius: 50%;
     margin: 20px auto 0px;
     background-color: #fff;
-
 }
+
 .profesor__img {
     position: relative;
     width: 200px;
@@ -446,141 +454,246 @@ body {
     object-position: top;
     border: 5px solid rgb(221, 220, 220);
     padding: 7px;
-    
 }
 
 .profesor__div2 {
-    /* background-color:rgb(230, 230, 230); */
+    flex-basis: 50%;
     height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    
 }
-.profesor__div-h6{
-    color:rgb(252, 82, 21);
+
+.profesor__div-h6 {
+    color: rgb(252, 82, 21);
     font-size: 1.2rem;
     font-weight: bold;
     letter-spacing: 1px;
+    text-align: center;
 }
 
-.profesor__div-span{
+.profesor__div-span {
     color: grey;
     text-align: center;
     padding: 5px;
     letter-spacing: 1.5px;
-    
 }
 
-.profesor__div-p{
-    background: rgb(180,125,58);
-    background: linear-gradient(90deg, rgba(180,125,58,1) 0%, rgba(253,202,29,1) 0%, rgba(252,96,69,1) 100%);
-    width:100%;
+.profesor__div-p {
+    background: rgb(180, 125, 58);
+    background: linear-gradient(90deg, rgba(180, 125, 58, 1) 0%, rgba(253, 202, 29, 1) 0%, rgba(252, 96, 69, 1) 100%);
+    width: 100%;
     text-align: center;
     color: #fff;
     padding: 10px;
     font-size: 1.1rem;
 }
 
-
-.profesor:nth-child(2) h6{
-   color: #800080;
+.profesor:nth-child(2) h6, .profesor:nth-child(6) h6, .profesor:nth-child(10) h6 {
+    color: #800080;
 }
 
-.profesor:nth-child(2) p{
-    background: rgb(180,125,58);
-    background: linear-gradient(90deg, rgba(180,125,58,1) 0%, rgba(187,29,253,1) 0%, rgba(128,0,128,1) 100%);
+.profesor:nth-child(2) p, .profesor:nth-child(6) p, .profesor:nth-child(10) p {
+    background: rgb(180, 125, 58);
+    background: linear-gradient(90deg, rgba(180, 125, 58, 1) 0%, rgba(187, 29, 253, 1) 0%, rgba(128, 0, 128, 1) 100%);
 }
 
+.profesor:nth-child(3) h6, .profesor:nth-child(7) h6, .profesor:nth-child(11) h6 {
+    color: #5abbdbe6;
+}
 
+.profesor:nth-child(3) p, .profesor:nth-child(7) p, .profesor:nth-child(11) p {
+    background: rgb(180, 125, 58);
+    background: linear-gradient(90deg, rgba(180, 125, 58, 1) 0%, rgba(90, 187, 219, 1) 0%, rgba(0, 102, 128, 1) 100%);
+}
 
+.profesor:nth-child(4) h6, .profesor:nth-child(8) h6 {
+    color: rgba(128, 0, 8, 1);
+}
 
+.profesor:nth-child(4) p, .profesor:nth-child(8) p {
+    background: rgb(180, 125, 58);
+    background: linear-gradient(90deg, rgba(180, 125, 58, 1) 0%, rgba(219, 151, 90, 1) 0%, rgba(128, 0, 8, 1) 100%);
+}
 
+/* ------------- Eventos ---------------- */
 
+.eventos {
+    display: flex;
+    justify-content: space-between;
+}
 
+.evento {
+    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    background-color: rgb(224, 224, 221);
+}
 
+.evento__div {
+    height: 200px;
+    width: 100%;
+}
 
+.evento__div-img {
+    display: inline-block;
+    background-position-x: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 200px;
+    min-width: 100%;
+}
 
+.evento__div, .evento__div2, .evento__div3, .evento__div4 {
+    flex-basis: 25%;
+}
 
+.evento__div2 {
+    background-color: #ffa500;
+    flex-shrink: 3;
+    width: 70%;
+    margin: 0 auto;
+    padding: 8px;
+    transform: translateY(-20px);
+    border-radius: 5px;
+}
 
+.evento__div2 p {
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
 
+.evento__div2:hover {
+    background-color: darkorange;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
 
+.evento__div3 {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.evento__div3 p {
+    text-transform: capitalize;
+    font-weight: 800;
+    font-size: 1.1rem;
+    padding: 3px;
+}
+
+.evento__div3 span {
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    font-weight: 100;
+    padding: 5px;
+    color: rgb(61, 61, 61);
+}
+
+.evento__div4 p {
+    text-align: center;
+    padding: 15px;
+    color: darkorange;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+/* ------------- Contactar ---------------- */
+
+.contactar {
+    background-color: black;
+    height: 800px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mapa1 {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    grid-template-rows: 50% 50%;
+    grid-column-gap: 20px;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+}
+.mapa2 {
+    flex-basis: 100%;
+    background-color: chartreuse;
+    flex-basis: 100%;
+    height: 50%;
+    width: 100%;
+}
+
+.mapa1__div {
+    color: #fff;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+    row-gap: 1px;
+    text-align: center;
+}
+
+.mapa1__div:nth-child(4) {
+    color: #fff;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+    row-gap: 10px;
+}
+
+.mapa1__div:nth-child(1) .mapa1__div-div3 p {
+    text-transform: capitalize;
+}
+
+.mapa1__div:nth-child(2) .mapa1__div-div3 {
+    word-break: break-all;
+}
+
+.mapa1__div-div, .mapa1__div-div2, .mapa1__div-div3 {
+    align-self: center;
+}
+
+.mapa1__div-div2 p {
+    color: grey;
+    text-transform: uppercase;
+}
+
+.mapa1__div:nth-child(1) .mapa1__div-div i, .mapa1__div:nth-child(3) .mapa1__div-div i {
+    color: grey;
+    font-size: 1.4rem;
+    border-radius: 50%;
+    border: 2px solid grey;
+    padding: 10px;
+}
+
+.mapa1__div-div i {
+    color: grey;
+    font-size: 1.4rem;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    padding: 10px;
+}
+
+.mapa1__div:nth-child(4) .mapa1__div4-div3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 25px;
+}
+
+.mapa1__div:nth-child(4) .mapa1__div4-div3 a i {
+    color: #fff;
+    font-size: 1.4rem;
+}
+
+.mapa1__div:nth-child(3) .mapa1__div-div3 p {
+    margin: 2px;
+}
 
 
 .alfinal {
     height: 1000px;
 }
-
-/* --------- OTRA FORMA DE PONER LAS CLASES -------*/
-
-/*-------------- SEGUNDAS 2 CLASES-------------------*/
-
-/* 
-.clases__div2 {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 5px auto;
-}
-
-.clases__div-div2:nth-of-type(1) {
-    width: 55%;
-    height: 200px;
-}
-
-.clases__div-div2:nth-of-type(2) {
-    width: 40%;
-}
-
-.clases__div-div2 {
-    height: 250px;
-    width: 250px;
-    margin: 15px 5px;
-    position: relative;
-}
-
-.clases__div-div2-img {
-    height: 200px;
-    width: 250px;
-}
-
-.clases__div-div2-img:nth-of-type(1) {
-    height: 100%;
-    width: 100%;
-}
-
-.clases__div-div2-img:nth-of-type(2) {
-    height: 250px;
-    width: 100%;
-}
-
-.clases__div-div2-button {
-    position: absolute;
-    left: 0;
-    bottom: 30%;
-    width: 100%;
-    height: 75px;
-    background-color: rgb(90, 187, 219, 0.9);
-    border: none;
-}
-
-.clases__div-div2-button a {
-    color: #fff;
-    font-size: 1rem;
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: 2px;
-    color: #ffffff;
-    font-weight: bold;
-   
-}
-
-
-.clases__div-div2:nth-of-type(3){
-    width: 40%;
-    height: 200px;
-    top: -30px;
-}
-.clases__div-div2:nth-of-type(4){
-    width: 55%
-} */
