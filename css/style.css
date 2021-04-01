@@ -12,6 +12,7 @@
 
 :root {
     --color-basico: rgb(173, 216, 230);
+    --color-gris: #808080;
 }
 
 /* ------------- Body ---------------- */
@@ -24,7 +25,6 @@ body {
     /* overflow: hidden; */
 }
 
-*/
 /* ------------- Nav ---------------- */
 
 .menu {
@@ -474,7 +474,7 @@ body {
 }
 
 .profesor__div-span {
-    color: grey;
+    color: var(--color-gris);
     text-align: center;
     padding: 5px;
     letter-spacing: 1.5px;
@@ -605,13 +605,14 @@ body {
 /* ------------- Contactar ---------------- */
 
 .contactar {
-    background-color: black;
-    height: 800px;
     display: flex;
     flex-wrap: wrap;
+    height: 800px;
 }
 
 .mapa1 {
+    height: 50%;
+    background-color: black;
     display: grid;
     grid-template-columns: 45% 45%;
     grid-template-rows: 50% 50%;
@@ -620,12 +621,17 @@ body {
     align-items: center;
     justify-content: center;
 }
+
 .mapa2 {
-    flex-basis: 100%;
-    background-color: chartreuse;
-    flex-basis: 100%;
     height: 50%;
+    margin-top: 20px;
+    flex-basis: 100%;
+}
+
+.mapa2 iframe {
+    display: inline-block;
     width: 100%;
+    height: 100%;
 }
 
 .mapa1__div {
@@ -693,7 +699,82 @@ body {
     margin: 2px;
 }
 
+/* ------------- Nuestras opiniones ---------------- */
+
+.opiniones {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    column-gap: 15px;
+}
+
+.opiniones_div {
+    position: relative;
+    height: 300px;
+}
+
+.opiniones_div-div {
+    height: 300px;
+    max-width: 100px;
+    margin: 0 0 0 25px;
+    background-color: var(--color-basico);
+}
+
+.opiniones_div-div2 {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    height: 70%;
+    width: 100%;
+    margin: -15% 0 0 -25%;
+}
+
+.opiniones__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.opiniones_div2 {
+    display: grid;
+    align-items: top;
+    text-align: center;
+    height: 95%;
+    align-self: top;
+}
+
+.opiniones_div2:before {
+    content: "";
+    background-image: url('../img/comillas.svg');
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    font-weight: 900;
+    color: black;
+    font-size: 2rem;
+    margin: 0 auto;
+}
+
+.opiniones_div2 h5 {
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    color: var(--color-gris);
+}
+
+.opiniones_div2 p {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.opiniones_div2 span {
+    color: var(--color-gris);
+    text-transform: uppercase;
+}
+
+/* ------------- Div separación para ver mas pantalla al final de la página ---------------- */
 
 .alfinal {
+    margin-top: 500px;
     height: 1000px;
 }
