@@ -21,8 +21,8 @@ body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
     background-color: rgb(247, 244, 244);
-    /* background-color: black;
-    /* overflow: hidden; */
+    /* background-color: black;*/
+   /* overflow: hidden; */
 }
 
 /* ------------- Nav ---------------- */
@@ -701,11 +701,17 @@ body {
 
 /* ------------- Nuestras opiniones ---------------- */
 
+.contenedor {
+	
+	width: 90%;
+	margin: auto;
+} 
 .opiniones {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-content: space-between;
-    column-gap: 15px;
+    
+    margin: 0 auto;
 }
 
 .opiniones_div {
@@ -723,9 +729,9 @@ body {
 .opiniones_div-div2 {
     position: absolute;
     top: 25%;
-    left: 25%;
+    left: 40%;
     height: 70%;
-    width: 100%;
+    width: 80%;
     margin: -15% 0 0 -25%;
 }
 
@@ -742,6 +748,7 @@ body {
     text-align: center;
     height: 95%;
     align-self: top;
+    width: 90%;
 }
 
 .opiniones_div2:before {
@@ -771,6 +778,90 @@ body {
     color: var(--color-gris);
     text-transform: uppercase;
 }
+
+
+/* ------------- Carousel opiniones ---------------- */
+
+.carousel__contenedor{
+    position: relative;
+}
+
+.carousel__anterior,
+.carousel__siguiente{
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: none;
+    top: calc(50% - 30px);
+    cursor: pointer;
+    line-height: 30px;
+    text-align: center;
+    background: none;
+    color:black;
+    opacity: 80%;
+    font-size: 40px;
+    transition: all .3s ease-in-out;
+}
+
+.carousel__anterior:hover,
+.carousel__siguiente:hover{
+    opacity: 100%;
+    color: var(--color-basico)
+    
+}
+.carousel__anterior{
+    left: -30px;
+}
+
+.carousel__siguiente{
+    right: -30px;
+}
+
+.carousel__lista{
+    overflow: hidden;
+}
+
+.carousel__elemento{
+    text-align: center;
+}
+
+
+.carousel__indicadores .glider-dot{
+    display: block;
+    width: 30px;
+    height: 8px;
+    background: var(--color-basico);
+    border: solid black 0.1px;
+    opacity: .2;
+    border-radius: 0;
+}
+.carousel__indicadores .glider-dot:hover{
+    opacity: 0.5;
+}
+.carousel__indicadores .glider-dot.active{
+    opacity: 1;
+} 
+
+/* --- --- MEDIA QUERIES --- --- */
+
+
+/* @media screen and (max-width: 800px) {
+	body {
+		padding: 40px 0;
+	}
+
+	.contenido-principal {
+		flex-direction: column;
+	}
+
+	.contenido-principal > * {
+		width: 100%;
+	}
+} 
+  */
+
+
 
 /* ------------- Div separación para ver mas pantalla al final de la página ---------------- */
 
