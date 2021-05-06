@@ -105,5 +105,3 @@ window.addEventListener("load", function () {
 })
 
 
-const classes= document.querySelectorAll(".clases");
-console.log(classes);
