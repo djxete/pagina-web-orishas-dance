@@ -84,7 +84,6 @@ body {
 
 /* ------------- Header ---------------- */
 
-
 .header {
     display: flex;
     margin: 7rem 1rem;
@@ -138,17 +137,18 @@ body {
     margin-top: 2rem;
     width: 60%;
 }
+
 .header__div2::after {
     content: '';
     display: block;
     padding-bottom: 100%;
 }
 
-.header__div2-div{
+.header__div2-div {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: var(--color-basico); 
+    background-color: var(--color-basico);
 }
 
 .header__div2-img {
@@ -156,7 +156,6 @@ body {
     width: 95%;
     height: 95%;
 }
-
 
 /* ------------- Nuestras clases ---------------- */
 
@@ -171,6 +170,7 @@ body {
     text-transform: uppercase;
     position: relative;
     margin: 80px 0;
+    font-size: calc(0.7em + 1.1vw + 1.1vh);
 }
 
 .linea-azul::after {
@@ -214,14 +214,13 @@ body {
 
 .clases__div-div-button {
     position: absolute;
-   top: 50%;
-   left: 50%;
-   height: 30%;
-   width: 100%;
-   margin: -15% 0 0 -50%;
-   background-color: rgb(90, 187, 219, 0.9);
-   border: none;
-
+    top: 50%;
+    left: 50%;
+    height: 30%;
+    width: 100%;
+    margin: -15% 0 0 -50%;
+    background-color: rgb(90, 187, 219, 0.9);
+    border: none;
 }
 
 .clases__div-div-button a {
@@ -246,7 +245,6 @@ body {
     height: 250px;
 }
 
-
 /* -------------- Clases 3 y 4 -------------- */
 
 .clases__div-div:nth-of-type(3) {
@@ -254,12 +252,10 @@ body {
     height: 250px;
 }
 
-
 .clases__div-div:nth-of-type(4) {
     width: 40%;
     height: 200px;
 }
-
 
 /* -------------- Clases 5 y 6 -------------- */
 
@@ -272,7 +268,6 @@ body {
     width: 55%;
     height: 250px;
 }
-
 
 /* -------------- Clases 9 y 10 -------------- */
 
@@ -288,13 +283,10 @@ body {
 
 /* -------------- Imágenes 1 y 3 para que se corten las imágenes -------------- */
 
-.clases__div-div:nth-of-type(1) > img,
-.clases__div-div:nth-of-type(3) > img {
-    width:100%;
-    object-fit:fill;
-    
+.clases__div-div:nth-of-type(1)>img, .clases__div-div:nth-of-type(3)>img {
+    width: 100%;
+    object-fit: fill;
 }
-
 
 /* ------------- Slider ---------------- */
 
@@ -713,12 +705,6 @@ body {
     margin: 0 auto;
 }
 
-.opiniones_div2 h5 {
-    text-transform: uppercase;
-    font-size: 1.3rem;
-    color: var(--color-gris);
-}
-
 .opiniones_div2 p {
     text-transform: uppercase;
     font-weight: bold;
@@ -844,19 +830,19 @@ body {
     margin-top: 2rem;
     margin-left: 1.2rem;
     width: 60%;
-    
 }
+
 .article__div2::after {
     content: '';
     display: block;
     padding-bottom: 100%;
 }
 
-.article__div2-div{
+.article__div2-div {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: var(--color-basico); 
+    background-color: var(--color-basico);
 }
 
 .article__div2-div-img {
@@ -865,7 +851,8 @@ body {
     height: 95%;
     filter: grayscale(0.8);
 }
-.article__div2-p{
+
+.article__div2-p {
     position: absolute;
     bottom: 5%;
     z-index: 1000;
@@ -876,7 +863,6 @@ body {
     width: 100%;
     margin: -15% 0 0 -24%;
 }
-
 
 /* ------------- Footer ---------------- */
 
@@ -920,6 +906,8 @@ footer {
     width: 3rem;
     height: 3rem;
     border-radius: 1.5rem;
+    margin: auto;
+
 }
 
 .footer__div1-icono {
@@ -1012,7 +1000,6 @@ footer {
 
 @media (min-width: 375px) and (max-width: 575px) {
     /* ------------- Header ---------------- */
-    
     .header {
         flex-direction: column;
         column-gap: 1rem;
@@ -1024,14 +1011,12 @@ footer {
     .header__div2 {
         position: relative;
         width: 70%;
-       
     }
-    .header__div2-div{
+    .header__div2-div {
         position: absolute;
         width: 100%;
         height: 100%;
         background-color: var(--color-basico);
-        
     }
     .header__div2::after {
         content: '';
@@ -1043,7 +1028,6 @@ footer {
         width: 95%;
         height: 95%;
     }
-    
     /* ------------- Eventos ---------------- */
     .eventos {
         display: flex;
@@ -1090,7 +1074,7 @@ footer {
     .article__div1 {
         flex-basis: 100%;
     }
-    .article__div2-p{
+    .article__div2-p {
         position: absolute;
         bottom: 5%;
         z-index: 1000;
@@ -1101,8 +1085,6 @@ footer {
         width: 100%;
         margin: -15% 0 0 -50%;
     }
-    
-    
     /* ------------- Footer ---------------- */
     .clases p {
         text-align: center;
@@ -1113,8 +1095,92 @@ footer {
 }
 
 @media (min-width: 767px) and (max-width: 991px) {
-   
+    /* ------------- Header ---------------- */
+    .header__div1 button {
+        padding: 1.5rem;
+        font-size: calc(1rem + 0.2vw + 0.2vh);
+    }
+    .header__div1 button:hover {
+        box-shadow: inset 0 0 20px rgba(49, 138, 172, 0.8), 0 0 20px rgba(49, 138, 172, 0.8);
+    }
+    /* ------------- Nuestras clases ---------------- */
+    .linea-azul {
+        font-size: calc( 0.7em + 1vw + 1vh);
+    }
+    .linea-azul::after {
+        width: 125px;
+    }
+    /* ------------- Nuestras clases ---------------- */
+    .clases__div-div-button {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+    .clases__div-div-button a {
+        color: #fff;
+        font-size: calc(1em + 0.5vw + 0.5vh);
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 2px;
+        color: #ffffff;
+        font-weight: bold;
+    }
+    /* -------------- Imagen 3 para que se corten las imágenes -------------- */
+    .clases__div-div:nth-of-type(3)>img {
+        width: 100%;
+        object-fit: cover;
+    }
+    /* ------------- Slider ---------------- */
+    .container__slider {
+        max-width: 660px;
+    }
+    .container__slider-div {
+        height: 415px;
+    }
+    /* ------------- Contactar ---------------- */
+    .contactar {
+        justify-content: center;
+    }
+    /* ------------- Nuestras opiniones ---------------- */
+    .opiniones_div2 {
+        width: 100%;
+    }
+    .opiniones_div2 blockquote {
+        font-size: calc(0.3rem + 0.9vw + 0.9vh);
+    }
+    /* ------------- Post ---------------- */
+    .article__div1-ol-li-a {
+        font-size: calc(0.3rem + 1vw + 1vh);
+    }
+    .article__div1-ol-li-blockquote {
+        text-align: center;
+        color: rgb(51, 50, 50);
+        margin-top: 0.5rem;
+        font-size: calc(0.3rem + 1vw + 1vh);
+    }
+    /* ------------- Footer ---------------- */
+    .footer__div1 {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        row-gap: 1rem;
+    }
+    .footer__div1-h4 {
+        text-align: center;
+        font-size:calc( 0.5em + 1vw + 1vh);
+    }
+    .footer__div2-h4 {
+        text-align: center;
+        font-size: calc( 0.5em + 1vw + 1vh);
+    }
     
+    .footer__div2-p{
+        font-size: calc(0.2rem + 1vw + 1vh);
+        
+    }
 }
 
 /* ------------- Div separación para ver mas pantalla al final de la página ---------------- */
