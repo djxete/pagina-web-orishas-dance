@@ -907,7 +907,6 @@ footer {
     height: 3rem;
     border-radius: 1.5rem;
     margin: auto;
-
 }
 
 .footer__div1-icono {
@@ -1170,16 +1169,125 @@ footer {
     }
     .footer__div1-h4 {
         text-align: center;
-        font-size:calc( 0.5em + 1vw + 1vh);
+        font-size: calc( 0.5em + 1vw + 1vh);
     }
     .footer__div2-h4 {
         text-align: center;
         font-size: calc( 0.5em + 1vw + 1vh);
     }
-    
-    .footer__div2-p{
+    .footer__div2-p {
         font-size: calc(0.2rem + 1vw + 1vh);
-        
+    }
+}
+
+@media (min-width: 991px) and (max-width: 1199px) {
+    /* ------------- Header ---------------- */
+    .header__div1 button {
+        padding: 1.5rem;
+        font-size: calc(0.8rem + 0.2vw + 0.2vh);
+    }
+    /* ------------- Section clases ---------------- */
+    /* -------------- Clases 1 y 2 -------------- */
+    .clases__div-div:nth-of-type(1) {
+        width: 30%;
+        height: 250px;
+    }
+    .clases__div-div:nth-of-type(2) {
+        width: 30%;
+        height: 250px;
+    }
+    /* -------------- Clases 3 y 4 -------------- */
+    .clases__div-div:nth-of-type(3) {
+        width: 30%;
+        height: 250px;
+    }
+    .clases__div-div:nth-of-type(4) {
+        width: 40%;
+        height: 250px;
+    }
+    /* -------------- Clases 5 y 6 -------------- */
+    .clases__div-div:nth-of-type(5) {
+        width: 40%;
+        height: 200px;
+    }
+    .clases__div-div:nth-of-type(6) {
+        width: 55%;
+        height: 250px;
+    }
+    /* -------------- Clases 9 y 10 -------------- */
+    .clases__div-div:nth-of-type(9) {
+        width: 30%;
+        height: 200px;
+    }
+    .clases__div-div:nth-of-type(10) {
+        width: 30%;
+        height: 250px;
+    }
+    /* ------------- Nuestras clases ---------------- */
+    .clases__div-div-button {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+    /* ------------- Slider ---------------- */
+    .container__slider {
+        max-width: 660px;
+    }
+    .container__slider-div {
+        height: 415px;
+    }
+    /* ------------- Eventos ---------------- */
+    .eventos {
+        justify-content: center;
+        column-gap: 5rem;
+    }
+    .evento {
+        height: 500px;
+    }
+    .evento__div2 {
+        flex-basis: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    /* ------------- Contactar ---------------- */
+    .contactar {
+        justify-content: center;
+    }
+    /* ------------- Post ---------------- */
+    .article__div1-ol-li-a {
+        font-size: calc(0.2rem + 1vw + 1vh);
+    }
+    .article__div1-ol-li-blockquote {
+        font-size: calc(0.2rem + 1vw + 1vh);
+    }
+    .article__div2 {
+        width: 40%;
+    }
+    /* ------------- Footer ---------------- */
+    .clases p {
+        letter-spacing: 0.1rem;
+        font-size: calc(0.1rem + 0.9vw + 0.9vh);
+    }
+    .footer__div1 {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        row-gap: 1rem;
+    }
+    .footer__div1-h4 {
+        text-align: center;
+        font-size: calc( 0.5em + 1vw + 1vh);
+    }
+    .footer__div2-h4 {
+        text-align: center;
+        font-size: calc( 0.5em + 1vw + 1vh);
+    }
+    .footer__div2-p {
+        font-size: calc(0.1rem + 1vw + 1vh);
     }
 }
 
